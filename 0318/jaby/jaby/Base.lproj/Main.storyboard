@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="jaby" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Wvw-WE-usy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N3-1L-KaG">
+                                <rect key="frame" x="164" y="737" width="66" height="51"/>
+                                <color key="tintColor" red="0.92804485560000005" green="0.47677494069999998" blue="0.18765671959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <buttonConfiguration key="configuration" style="filled" image="pencil" catalog="system" imagePlacement="top" cornerStyle="large" buttonSize="large">
+                                    <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="1">
+                                        <color key="strokeColor" red="0.17999999999999999" green="0.093339290008774861" blue="0.037817772884813132" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="black"/>
+                                    <color key="baseBackgroundColor" red="0.034933433600000001" green="0.037255312610000001" blue="0.040956439390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addTodo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAJ-p8-F44"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="switch01" translatesAutoresizingMaskIntoConstraints="NO" id="2S3-8b-xsI">
+                                <rect key="frame" x="313" y="547" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="0.92804485559463501" green="0.47677494066232873" blue="0.18765671957018107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="switchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="h57-3g-b4f"/>
+                                </connections>
+                            </switch>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Dd-bA-MIX">
+                                <rect key="frame" x="131" y="635" width="131" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wvW-Ij-Hwa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="Wvw-WE-usy" secondAttribute="bottom" constant="-29" id="4GS-7Z-dvt"/>
+                            <constraint firstItem="5Dd-bA-MIX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="576" id="M3Q-39-I5p"/>
+                            <constraint firstItem="Wvw-WE-usy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ubq-dd-yhe"/>
+                            <constraint firstItem="5Dd-bA-MIX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ajg-GO-15z"/>
+                            <constraint firstItem="5N3-1L-KaG" firstAttribute="top" secondItem="5Dd-bA-MIX" secondAttribute="bottom" constant="72" id="enR-cu-KMr"/>
+                            <constraint firstItem="5Dd-bA-MIX" firstAttribute="centerX" secondItem="Wvw-WE-usy" secondAttribute="centerX" id="hHN-OT-yNn"/>
+                            <constraint firstItem="5Dd-bA-MIX" firstAttribute="centerX" secondItem="5N3-1L-KaG" secondAttribute="centerX" id="oNd-aq-e3P"/>
+                            <constraint firstItem="Wvw-WE-usy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="thU-Lf-7jp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="5N3-1L-KaG" id="kyH-cG-VmQ"/>
+                        <outlet property="filterSegmentedControl" destination="5Dd-bA-MIX" id="0JB-jf-RfN"/>
+                        <outlet property="tableView" destination="Wvw-WE-usy" id="WMy-zY-2Nd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="145.80152671755724" y="-6.3380281690140849"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
